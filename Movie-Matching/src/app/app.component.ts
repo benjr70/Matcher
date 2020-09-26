@@ -23,4 +23,12 @@ export class AppComponent  implements OnInit, OnDestroy {
     this.htmlTag.classList.remove('home-page');
   }
 
+  startClick() {
+    
+  }
+
+  generateCode() {
+    return 12345;
+  }
+
 }

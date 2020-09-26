@@ -1,5 +1,16 @@
-<h2 class="center">Welcome to the Movie Matching</h2>
-<h3 class="center">This app is for couples that struggle to find shows/moives to watch together.</h3>
-<h3 class="center">Simply link your codes together and start swiping your shows.</h3>
-<h3 class="center">We'll let you know if you've match on a moive or show!</h3>
+<h1 class="mat-display-1 title">Welcome to the Movie Matching</h1>
+<h3 class="text">This app is for couples that struggle to find shows/moives to watch together.</h3>
+<h3 class="text">Simply link your codes together and start swiping your shows.</h3>
+<h3 class="text">We'll let you know if you've match on a moive or show!</h3>
+<div style="text-align: center;">
+    <mat-label class="text btn">Your Code</mat-label>
+    <form>
+        <mat-form-field class="input btn" >
+        <mat-label class="input">Partner Code</mat-label>
+        <input matInput type="number" class="input" #code>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" class="btn" (click)= startClick()>Start</button>
+    </form>
 <router-outlet></router-outlet>
+</div>
