@@ -1,10 +1,22 @@
-# MovieMatching
+# Matcher
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 
-## Development server
+## Set up installs
+install npm version 6.14.7
+install node verison 12.18.4
+install nvm 1.1.7
+npm install -g @angular/cli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Run Local
+npm install
+npm run start
+
+go to `http://localhost:4200/` in broswer
+
+<!-- ## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. -->
 
 ## Code scaffolding
 
