@@ -7,7 +7,7 @@ import { Component, ViewEncapsulation, OnInit, OnDestroy} from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent  implements OnInit, OnDestroy {
-  title = 'Movie-Matching';
+  title = 'Frontend';
   bodyTag: HTMLBodyElement = document.getElementsByTagName('body')[0];
   htmlTag: HTMLElement = document.getElementsByTagName('html')[0];
 
