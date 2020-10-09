@@ -1,0 +1,38 @@
+version: '3'
+services:
+
+  database:
+    image: "postgres:9.6-alpine"
+    container_name: Matcher-Database
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: matcher
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+        - matcher-data:/data/postgres
+    restart: unless-stopped
+
+  backend:
+    build: ./Backend
+    container_name: Matcher-Backend
+    environment:
+      - DB_SERVER=database
+    ports:
+      - 3000:3000
+    links:
+      - database
+
+  frontend:
+    build: ./Frontend
+    container_name: Matcher-Frontend
+    ports:
+      - 80:80
+    links:
+      - backend
+
+
+volumes:
+  matcher-data:
