@@ -26,13 +26,17 @@ services:
       - database
 
   frontend:
-    build: ./Frontend
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
     container_name: Matcher-Frontend
     ports:
-      - 80:80
+      - 4201:4201
     links:
       - backend
-
-
+    volumes:
+      - ./Frontend:/usr/src/app/Frontend
+      - /usr/src/app/Frontend/node_modules
+      
 volumes:
   matcher-data:
